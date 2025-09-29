@@ -47,6 +47,10 @@ int main() {
         fin.ignore(); // To ignore the newline character after the integer input
         tempMovies[i].yrSetter(year);
     }
-
+    for (int i = 0; i < tempMovies.size(); ++i) {
+        tempMovies[i].display();
+        cout << endl;
+    }
 
     return 0;
+}
