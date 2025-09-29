@@ -36,6 +36,17 @@ int main() {
         cerr << "Error opening file." << endl;
         return 1;
     }
+    for (int i = 0; i < tempMovies.size(); ++i) {
+        string title, screenWriter;
+        getline(fin, title);
+        tempMovies[i].titleSetter(title);
+        getline(fin, screenWriter);
+        tempMovies[i].swSetter(screenWriter);
+        int year;
+        fin >> year;
+        fin.ignore(); // To ignore the newline character after the integer input
+        tempMovies[i].yrSetter(year);
+    }
 
 
     return 0;
