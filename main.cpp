@@ -26,9 +26,17 @@ class Movie {
         cout << "Screenwriter: " << screenWriter << endl;
         cout << "Year Released: " << yearReleased << endl;
     }
-};
+}
 
 int main() {
+    array<Movie, 4> tempMovies;
+    ifstream fin; 
+    fin.open("input.txt");
+    if (fin.good( )) {
+        cerr << "Error opening file." << endl;
+        return 1;
+    }
 
 
     return 0;
+}
