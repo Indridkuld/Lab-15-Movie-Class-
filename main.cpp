@@ -26,9 +26,9 @@ class Movie {
         cout << "Year Released: " << yearReleased << endl;
         cout << "Screenwriter: " << screenWriter << endl;
     }
-}
+};
 
-int main() {
+int main() 
     array<Movie, 4> tempMovies;
     ifstream fin; 
     fin.open("input.txt");
