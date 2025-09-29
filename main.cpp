@@ -26,4 +26,9 @@ class Movie {
         cout << "Screenwriter: " << screenWriter << endl;
         cout << "Year Released: " << yearReleased << endl;
     }
-}
+};
+
+int main() {
+
+
+    return 0;
