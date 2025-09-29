@@ -22,7 +22,7 @@ class Movie {
     string titleGetter() const {return title;}
 
     void display() const {
-        cout << "Title: " << title << endl;
+        cout << "Movie: " << title << endl;
         cout << "Year Released: " << yearReleased << endl;
         cout << "Screenwriter: " << screenWriter << endl;
     }
@@ -39,13 +39,14 @@ int main() {
     for (int i = 0; i < tempMovies.size(); ++i) {
         string temptitle, tempscreenWriter;
         int tempyear;
+
         getline(fin, temptitle);
-        tempMovies[i].titleSetter(temptitle);
-        getline(fin, tempscreenWriter);
-        tempMovies[i].swSetter(tempscreenWriter);
-        
         fin >> tempyear;
         fin.ignore(); 
+        getline(fin, tempscreenWriter);
+        tempMovies[i].titleSetter(temptitle);
+        tempMovies[i].yrSetter(tempyear);
+        tempMovies[i].swSetter(tempscreenWriter);
     }
     for (int i = 0; i < tempMovies.size(); ++i) {
         tempMovies[i].display();
@@ -53,3 +54,4 @@ int main() {
     }
 
     return 0;
+}
