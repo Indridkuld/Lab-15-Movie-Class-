@@ -23,8 +23,8 @@ class Movie {
 
     void display() const {
         cout << "Title: " << title << endl;
-        cout << "Screenwriter: " << screenWriter << endl;
         cout << "Year Released: " << yearReleased << endl;
+        cout << "Screenwriter: " << screenWriter << endl;
     }
 };
 
@@ -37,15 +37,14 @@ int main() {
         return 1;
     }
     for (int i = 0; i < tempMovies.size(); ++i) {
-        string title, screenWriter;
-        getline(fin, title);
-        tempMovies[i].titleSetter(title);
-        getline(fin, screenWriter);
-        tempMovies[i].swSetter(screenWriter);
-        int year;
-        fin >> year;
-        fin.ignore(); // To ignore the newline character after the integer input
-        tempMovies[i].yrSetter(year);
+        string temptitle, tempscreenWriter;
+        getline(fin, temptitle);
+        tempMovies[i].titleSetter(temptitle);
+        getline(fin, tempscreenWriter);
+        tempMovies[i].swSetter(tempscreenWriter);
+        int tempyear;
+        fin >> tempyear;
+        fin.ignore(); 
     }
     for (int i = 0; i < tempMovies.size(); ++i) {
         tempMovies[i].display();
@@ -53,4 +52,3 @@ int main() {
     }
 
     return 0;
-}
