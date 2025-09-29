@@ -38,11 +38,12 @@ int main() {
     }
     for (int i = 0; i < tempMovies.size(); ++i) {
         string temptitle, tempscreenWriter;
+        int tempyear;
         getline(fin, temptitle);
         tempMovies[i].titleSetter(temptitle);
         getline(fin, tempscreenWriter);
         tempMovies[i].swSetter(tempscreenWriter);
-        int tempyear;
+        
         fin >> tempyear;
         fin.ignore(); 
     }
