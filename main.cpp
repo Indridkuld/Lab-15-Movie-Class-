@@ -2,6 +2,8 @@
 // IDE used: Visual Studio Code
 
 #include <iostream>
+#include <array>
+#include <fstream>
 
 using namespace std; 
 
@@ -13,5 +15,15 @@ class Movie {
 
     public:
     void swSetter(string sw) {screenWriter = sw;}
+    void yrSetter(int yr) {yearReleased = yr;}
+    void titleSetter(string t) {title = t;}
+    string swGetter() const {return screenWriter;}
+    int yrGetter() const {return yearReleased;}
+    string titleGetter() const {return title;}
 
-};
+    void display() const {
+        cout << "Title: " << title << endl;
+        cout << "Screenwriter: " << screenWriter << endl;
+        cout << "Year Released: " << yearReleased << endl;
+    }
+}
